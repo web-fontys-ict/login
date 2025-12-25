@@ -1,0 +1,93 @@
+:root{
+  --primary:#7b2ff7;
+  --accent:#00f8ff;
+  --bg:#0b0b0c;
+  --box:#141416;
+  --text:#e9e9e9;
+  --red:#d9534f;
+  --green:#00f89c;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter, sans-serif;}
+body{background:var(--bg);color:var(--text);overflow:hidden;}
+
+/* Background animation */
+.login-bg{
+  position:fixed;inset:0;
+  background:radial-gradient(circle at 20% 30%, #1c0031 0%, #050007 100%);
+  animation:bgMove 15s infinite alternate ease-in-out;
+}
+@keyframes bgMove{
+  0%{filter:hue-rotate(0deg);}
+  100%{filter:hue-rotate(30deg);}
+}
+
+.login-container{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:340px;text-align:center;
+}
+
+.logo{
+  font-size:28px;font-weight:700;
+  background:linear-gradient(90deg,var(--accent),var(--primary));
+  -webkit-background-clip:text;color:transparent;
+  margin-bottom:20px;letter-spacing:1px;
+}
+
+.title{font-size:24px;margin-bottom:6px;}
+.subtitle{opacity:.7;margin-bottom:25px;}
+
+.login-box{
+  background:var(--box);
+  padding:30px;border-radius:14px;
+  border:1px solid #ffffff10;
+  backdrop-filter:blur(12px);
+  box-shadow:0 0 35px #0008;
+  display:flex;flex-direction:column;gap:12px;
+}
+
+input{
+  padding:12px 14px;
+  border-radius:8px;
+  border:1px solid #444;
+  background:#0f0f11;
+  color:white;outline:none;
+  transition:.2s;
+}
+input:focus{border-color:var(--accent);box-shadow:0 0 8px var(--accent);}
+
+.login-btn{
+  padding:12px;
+  border:none;border-radius:8px;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  color:white;font-weight:600;cursor:pointer;
+  transition:.2s;
+}
+.login-btn:hover{transform:scale(1.03);}
+
+.extra-links{
+  display:flex;justify-content:space-between;
+  font-size:13px;margin-top:8px;
+}
+.extra-links a{text-decoration:none;color:var(--accent);}
+.register-link{opacity:.7;}
+.login-status{font-size:14px;margin-top:8px;min-height:20px;}
+
+/* RESET POPUP */
+.reset-popup{
+  position:fixed;inset:0;display:none;
+  background:#0007;backdrop-filter:blur(6px);
+  align-items:center;justify-content:center;
+}
+.reset-box{
+  background:var(--box);
+  padding:25px;border:1px solid #fff1;
+  border-radius:14px;width:300px;text-align:center;
+  animation:pop .35s ease forwards;
+}
+@keyframes pop{from{transform:scale(.8);opacity:0;}to{transform:scale(1);opacity:1;}}
+.reset-box h2{margin-bottom:8px;}
+.reset-box button{margin-top:10px;width:100%;padding:10px;border-radius:8px;border:none;cursor:pointer;}
+.close{background:#222;color:#eee;}
+

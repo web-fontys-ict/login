@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>📝 Assignments</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<script src="assignments.js" defer></script>
+</head>
+<body>
+
+<span id="burger" onclick="menuToggle()">☰</span>
+
+<div class="app">
+
+<aside>
+<div class="nav-title">Fontys ICT</div>
+<nav>
+<a href="index.html">🏠 Dashboard</a>
+<a href="schedule.html">📅 Schedule</a>
+<a href="grades.html">📊 Grades</a>
+<a class="active" href="assignments.html">📝 Assignments</a>
+<a href="messages.html">💬 Messages</a>
+<a href="mail.html">📨 Mail</a>
+<a href="profile.html">👤 Profile</a>
+</nav>
+</aside>
+
+<main>
+<h1>📝 Assignments & Coursework</h1>
+
+<div class="assign-layout">
+
+  <!-- LEFT LIST -->
+  <div class="assign-sidebar" id="assignList"></div>
+
+  <!-- RIGHT PANEL (EMPTY, JS FILLS IT) -->
+  <div class="assign-view" id="assignView">
+      <h2>Select assignment</h2>
+      <p class="muted">Choose a task from the list to view details.</p>
+  </div>
+
+</div>
+
+</main>
+</div>
+
+</body>
+</html>

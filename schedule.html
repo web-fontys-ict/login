@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>📅 Schedule</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+<script defer src="schedule.js"></script>
+</head>
+<body>
+
+<span id="burger" onclick="menuToggle()">☰</span>
+
+<div class="app">
+<aside>
+<div class="nav-title">Fontys ICT</div>
+<nav>
+  <a href="index.html">🏠 Dashboard</a>
+  <a class="active" href="schedule.html">📅 Schedule</a>
+  <a href="grades.html">📊 Grades</a>
+  <a href="assignments.html">📝 Assignments</a>
+  <a href="messages.html">💬 Messages</a>
+  <a href="mail.html">📨 Mail</a>
+<a href="profile.html">👤 Profile</a>
+</nav>
+</aside>
+
+<main>
+<h1>📅 Calendar & Timetable</h1>
+
+<!-- ПЕРЕКЛЮЧЕНИЕ МЕСЯЦЕВ -->
+<div class="month-switch">
+  <button onclick="showMonth('dec2025')">December 2025</button>
+  <button onclick="showMonth('jan2026')">January 2026</button>
+  <button class="locked">February 2026 • Available Later</button>
+</div>
+
+<!-- ЗАГОЛОВКИ ДНЕЙ -->
+<div class="week-header">
+  <div>Mon</div><div>Tue</div><div>Wed</div>
+  <div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div>
+</div>
+
+<!-- DECEMBER -->
+<div id="dec2025" class="calendar"></div>
+
+<!-- JANUARY -->
+<div id="jan2026" class="calendar hidden"></div>
+
+</main>
+</div>
+
+</body>
+</html>

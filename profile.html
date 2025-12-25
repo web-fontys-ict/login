@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>👤 Student Profile</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<span id="burger" onclick="menuToggle()">☰</span>
+
+<div class="app">
+
+<aside>
+<div class="nav-title">Fontys ICT</div>
+<nav>
+<a href="index.html">🏠 Dashboard</a>
+<a href="schedule.html">📅 Schedule</a>
+<a href="grades.html">📊 Grades</a>
+<a href="assignments.html">📝 Assignments</a>
+<a href="messages.html">💬 Messages</a>
+<a href="mail.html">📨 Mail</a>
+<a class="active" href="profile.html">👤 Profile</a>
+</nav>
+</aside>
+
+<main class="profile-main">
+
+<!-- HEADER -->
+<div class="profile-header">
+    <div class="profile-banner"></div>
+
+    <div class="profile-avatar-wrap">
+        <img id="avatarPreview" class="profile-avatar" src="avatar.png" alt="avatar">
+    </div>
+</div>
+
+
+<!-- ACTION BAR (Edit + Change Photo) -->
+<div class="profile-actions">
+    <button id="editProfileBtn" class="edit-btn">✏️ Edit Profile</button>
+
+    <label class="avatar-side-btn">
+        📸 Change Photo
+        <input type="file" id="avatarUpload" accept="image/*">
+    </label>
+</div>
+
+
+<!-- ===== PROFILE INFORMATION (FULL REWORK) ===== -->
+<section class="identity-block">
+
+  <div class="id-line"></div>
+
+  <div class="id-section">
+    <h4 class="id-label">IDENTITY RECORD</h4>
+    <div class="id-value name">Maksim Semeniuk</div>
+    <div class="id-meta">Registered student identity • Fontys ICT</div>
+  </div>
+
+  <div class="id-section">
+    <h4 class="id-label">ACADEMIC ROLE</h4>
+    <div class="id-value">Bachelor of ICT • Cybersecurity & Systems</div>
+    <div class="id-meta">Fontys University of Applied Sciences</div>
+  </div>
+
+  <div class="id-section">
+    <h4 class="id-label">CONTACT CHANNEL</h4>
+    <div class="id-value contact">maksim.semeniuk@student.fontys.nl</div>
+    <div class="id-meta">Primary academic address • Verified</div>
+  </div>
+
+  <div class="id-section">
+    <h4 class="id-label">CIVIL DATA</h4>
+    <div class="id-grid">
+      <div class="id-group">
+        <span>DOB</span>
+        <p>28 March 2000</p>
+      </div>
+      <div class="id-group">
+        <span>AGE</span>
+        <p>25 y/o</p>
+      </div>
+      <div class="id-group">
+        <span>NATIONALITY</span>
+        <p>Lithuanian</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- SKILLS (locked) -->
+<div class="profile-section pretty-block">
+  <h3>Skills</h3>
+  <ul class="pretty-list">
+    <li><span>🛡 Cybersecurity & Networking</span><br><small>R3.14 labs, access control, VLAN / routing, protocol handling</small></li>
+    <li><span>🧩 Software Engineering</span><br><small>Git workflows, CI/CD pipelines, versioning & documentation standards</small></li>
+    <li><span>🐧 Linux & Virtualization</span><br><small>Server admin, containers, VM orchestration, automated environments</small></li>
+    <li><span>💡 Full-Stack Fundamentals</span><br><small>Python, JavaScript, automation, internal tooling & web systems</small></li>
+  </ul>
+</div>
+
+<!-- EDUCATION (locked / redesigned) -->
+<div class="profile-section edu-block">
+  <h3>Education</h3>
+
+  <div class="edu-header">
+    <div class="edu-icon">🎓</div>
+    <div class="edu-info">
+      <div class="edu-title">Fontys University of Applied Sciences</div>
+      <div class="edu-sub">Bachelor of ICT — <span>Expected 2026</span></div>
+      <div class="edu-focus">Cybersecurity • Software Engineering • System Automation</div>
+    </div>
+  </div>
+
+  <hr class="edu-line">
+
+  <ul class="edu-list">
+    <li><span>🛡 Secure System Design & Practical Lab Infrastructure</span></li>
+    <li><span>🐧 Applied Linux Operations & Networking</span></li>
+    <li><span>🧩 Software Architecture & Engineering Methodologies</span></li>
+    <li><span>🤖 AI/ML Literacy for Practical Environments</span></li>
+  </ul>
+</div>
+
+
+<!-- LAB ACCESS (locked) -->
+<div class="profile-section pretty-block">
+  <h3>Campus & Lab Access</h3>
+  <div class="pretty-labs">
+    <div>🛡 <b>R3.14 — Cybersecurity Lab</b> <span class="tag allowed">Access Granted</span><br><small>System testing, network isolation, auditing practice</small></div>
+    <div>💻 <b>B2.08 — Software Engineering Lab</b> <span class="tag allowed">Full Access</span><br><small>Dev builds, debugging, build/test environments</small></div>
+    <div>🤖 <b>W-204 — AI/ML Lab</b> <span class="tag limited">Limited Hours</span><br><small>Model validation, sandbox computation</small></div>
+    <div>🌐 <b>Server Lab — Virtual Machines</b> <span class="tag remote">Remote Only</span><br><small>Virtual infrastructure, orchestration & imaging</small></div>
+  </div>
+</div>
+
+
+
+
+</main>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<title>Login • Fontys ICT Portal</title>
+<link rel="stylesheet" href="login.css">
+<script defer src="login.js"></script>
+</head>
+<body>
+
+<!-- АНИМИРОВАННЫЙ ФОН -->
+<div class="login-bg"></div>
+
+<!-- ЛОГИН ФОРМА -->
+<div class="login-container">
+
+  <div class="logo">Fontys ICT</div>
+
+  <h1 class="title">Campus Access</h1>
+  <p class="subtitle">Authenticate with your student identity</p>
+
+  <div class="login-box">
+
+    <input id="loginEmail" type="email" placeholder="✉️ Email address" autocomplete="off">
+    <input id="loginPass" type="password" placeholder="🔒 Password">
+
+    <button id="loginBtn" class="login-btn">Sign In</button>
+
+    <div class="extra-links">
+      <a href="#" id="forgotPw">Forgot password?</a>
+    </div>
+
+    <div id="loginStatus" class="login-status"></div>
+  </div>
+</div>
+
+
+<!-- POPUP ДЛЯ RESET -->
+<div class="reset-popup" id="resetPopup">
+  <div class="reset-box">
+    <h2>Password Reset</h2>
+    <p>Enter your email to receive a reset link.</p>
+
+    <input id="resetMail" type="email" placeholder="✉️ Email">
+    <button id="resetSend" class="login-btn">Send Reset Link</button>
+    <button id="resetClose" class="close">Cancel</button>
+  </div>
+</div>
+
+</body>
+</html>

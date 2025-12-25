@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>📨 Fontys Mail</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<script src="mail.js" defer></script>
+</head>
+<body>
+
+<span id="burger" onclick="menuToggle()">☰</span>
+
+<div class="app mail-app">
+
+<aside>
+<div class="nav-title">Fontys ICT</div>
+<nav>
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="schedule.html">📅 Schedule</a>
+    <a href="grades.html">📊 Grades</a>
+    <a href="assignments.html">📝 Assignments</a>
+    <a href="messages.html">💬 Messages</a>
+    <a class="active" href="mail.html">📨 Mail <span id="mailBadge" class="mail-badge"></span></a>
+    <a href="profile.html">👤 Profile</a>
+</nav>
+</aside>
+
+<main class="mail-main">
+
+<!-- TOP BAR -->
+<div class="mail-topbar">
+    <button class="mail-btn">New mail</button>
+    <div class="mail-title">📨 Fontys ICT Newsletters</div>
+    <div class="mail-account">maksim.semeniuk@student.fontys.nl</div>
+</div>
+
+<div class="mail-columns">
+
+    <!-- LEFT: FOLDERS -->
+    <div class="mail-folders">
+        <div class="folder active">📥 Newsletters</div>
+        <div class="folder">📂 Archive</div>
+    </div>
+
+    <!-- MIDDLE: LIST -->
+<div class="mail-middle">
+    <input type="text" id="mailSearch" class="mail-search" placeholder="🔍 Search mail...">
+    <div class="mail-list" id="mailList"></div>
+</div>
+
+
+    <!-- RIGHT: CONTENT -->
+    <div class="mail-reader">
+        <div id="mailHeader">
+            <h2>Select newsletter</h2>
+            <div class="mail-header-details">No message selected</div>
+        </div>
+        <div class="mail-actions">
+    <button onclick="replyMail()">Reply</button>
+    <button onclick="forwardMail()">Forward</button>
+</div>
+
+<hr>
+        <div id="mailBody" class="mail-body">Click on a message to view.</div>
+    </div>
+
+</div>
+
+</main>
+</div>
+
+</body>
+</html>

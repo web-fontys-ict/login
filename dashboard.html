@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<title>📊 Dashboard • University Portal</title>
+
+<script>
+  if(localStorage.getItem("auth") !== "true"){
+    window.location.href = "index.html"; // теперь это login
+  }
+</script>
+
+
+<link rel="stylesheet" href="style.css">
+<script defer src="dashboard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<span id="burger" onclick="menuToggle()">☰</span>
+
+<div class="app">
+
+  <aside>
+    <div class="nav-title">Fontys ICT</div>
+    <nav>
+      <a class="active" href="index.html">🏠 Dashboard</a>
+      <a href="schedule.html">📅 Schedule</a>
+      <a href="grades.html">📊 Grades</a>
+      <a href="assignments.html">📝 Assignments</a>
+      <a href="messages.html">💬 Messages</a>
+      <a href="mail.html">📨 Mail</a>
+      <a href="profile.html">👤 Profile</a>
+    </nav>
+  </aside>
+
+  <main>
+
+    <!-- HEADER -->
+    <section class="dashboard-header">
+      <div>
+        <h1>Welcome back, <span id="studentName">Maksim</span> 👋</h1>
+        <p class="sub-info">Integrated academic control panel</p>
+      </div>
+      <img id="studentAvatar" src="avatar.png" class="dash-avatar">
+    </section>
+
+    <!-- SHORTCUTS -->
+    <section class="dashboard-cards">
+      <div class="card" onclick="location.href='schedule.html'">📅 <span>Timetable</span></div>
+      <div class="card" onclick="location.href='assignments.html'">📝 <span>Assignments</span></div>
+      <div class="card" onclick="location.href='grades.html'">📈 <span>Grades</span></div>
+      <div class="card" onclick="location.href='messages.html'">💬 <span>Messages</span></div>
+    </section>
+
+    <!-- STATS -->
+    <section class="dashboard-stats">
+      <div class="stat"><h3 id="avgGrade">7.24</h3><p>Avg Grade</p></div>
+      <div class="stat"><h3 id="credits">42</h3><p>Credits</p></div>
+      <div class="stat"><h3 id="doneAssg">18</h3><p>Done Tasks</p></div>
+      <div class="stat"><h3 id="coursesCnt">5</h3><p>Courses</p></div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="dashboard-main">
+
+      <!-- LEFT SIDE -->
+      <div class="dashboard-left">
+
+        <!-- SYSTEM STATUS -->
+        <div class="block">
+          <h2>🏛 Campus System Status</h2>
+          <div class="status-row"><span>Eduroam Network</span><b class="ok">ONLINE</b></div>
+          <div class="status-row"><span>Moodle Submission</span><b class="ok">AVAILABLE</b></div>
+          <div class="status-row"><span>Fontys Email</span><b class="ok">OPERATIONAL</b></div>
+          <div class="status-row"><span>VPN Remote Labs</span><b class="warn">SLOW</b></div>
+          <div class="status-row"><span>W-204 Cyber Lab</span><b class="busy">CLOSED</b></div>
+        </div>
+
+        <!-- ROADMAP -->
+        <div class="block">
+          <h2>🧭 Dynamic Skill Roadmap</h2>
+          <ul id="roadmapList" class="roadmap-list"></ul>
+        </div>
+
+        <!-- BEHAVIOR ENGINE -->
+        <div class="block">
+          <h2>🧬 Behavior-Based Study Predictor</h2>
+          <div id="predictionBox" class="predictor-box">Analyzing...</div>
+        </div>
+
+<!-- 🛰️ REAL-TIME TERMINAL FEED -->
+<div class="block">
+  <h2>🛰️ Campus Ops Terminal</h2>
+  <div id="terminalFeed" class="terminal-feed">
+    <div class="term-line">[BOOT] Initializing university systems...</div>
+    <div class="term-line">[OK] Eduroam handshake stable</div>
+    <div class="term-line">[OK] Fontys Mail: authenticated session</div>
+    <div class="term-line">[WARN] VPN latency detected → rerouting...</div>
+  </div>
+</div>
+
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="dashboard-right">
+
+<!-- 🌦 EINDHOVEN WEATHER -->
+<div class="block weather-card">
+  <img src="https://wttr.in/Eindhoven.png?m" style="width:100%;border-radius:12px;">
+</div>
+
+       <!-- LOCAL WORKSPACE -->
+        <div class="block">
+          <h2>📦 Local Workspace Scanner</h2>
+          <div id="scanOutput" class="scan-output"></div>
+        </div> 
+
+ <!-- REALTIME CONSOLE -->
+        <div class="block">
+          <h2>🛰 Real-Time Campus Console</h2>
+          <div id="consoleStream" class="console-stream"></div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+</div>
+</body>
+</html>

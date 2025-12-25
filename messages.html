@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>💬 Messages</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js?v=11" defer></script>
+</head>
+<body>
+<span id="burger" onclick="menuToggle()">☰</span>
+
+<div class="app">
+<aside>
+<div class="nav-title">Fontys ICT</div>
+<nav>
+<a href="index.html">🏠 Dashboard</a>
+<a href="schedule.html">📅 Schedule</a>
+<a href="grades.html">📊 Grades</a>
+<a href="assignments.html">📝 Assignments</a>
+<a class="active" href="messages.html">💬 Messages</a>
+<a href="mail.html">📨 Mail</a>
+<a href="profile.html">👤 Profile</a>
+</nav>
+</aside>
+
+<main>
+<h1>💬 Messages</h1>
+
+<div class="msg-layout">
+
+  <!-- CONTACT LIST -->
+  <aside class="msg-sidebar" id="chatList">
+
+    <div class="msg-search"><input type="text" placeholder="Search..."></div>
+
+    <div class="msg-person" onclick="openDialog('jansen')">
+      <img src="q3.png" class="avatar img">
+      <div class="info">
+        <b>Dr. Jansen</b>
+        <small id="prev-jansen"></small>
+      </div>
+      <span class="badge" id="new-jansen" style="display:none;">1</span>
+    </div>
+
+    <div class="msg-person" onclick="openDialog('hurkmans')">
+      <img src="q1.png" class="avatar img">
+      <div class="info">
+        <b>Freddy Hurkmans</b>
+        <small id="prev-hurkmans"></small>
+      </div>
+      <span class="badge" id="new-hurkmans" style="display:none;">1</span>
+    </div>
+
+    <div class="msg-person" onclick="openDialog('devries')">
+      <img src="q4.png" class="avatar img">
+      <div class="info">
+        <b>Mr. de Kries</b>
+        <small id="prev-devries"></small>
+      </div>
+    </div>
+
+    <div class="msg-person" onclick="openDialog('visser')">
+      <img src="q5.png" class="avatar img">
+      <div class="info">
+        <b>Ms. Visser</b>
+        <small id="prev-visser"></small>
+      </div>
+    </div>
+
+    <div class="msg-person" onclick="openDialog('vermeer')">
+      <img src="q2.png" class="avatar img">
+      <div class="info">
+        <b>Lucas Vermeer</b>
+        <small id="prev-vermeer"></small>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- CHAT WINDOW -->
+  <section class="msg-window">
+    <header class="msg-topbar">
+      
+      <div>
+        <h2 id="chatTitle"></h2>
+        <span id="chatSubtitle"></span>
+      </div>
+    </header>
+
+    <div class="msg-messages" id="chatWindow"></div>
+
+    <footer class="msg-input-area">
+      <input type="file" id="fileUpload">
+      <input id="chatInput" placeholder="Message...">
+      <button id="sendMsg">➤</button>
+    </footer>
+  </section>
+
+</div>
+</main>
+</div>
+</body>
+</html>
