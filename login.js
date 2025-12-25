@@ -31,7 +31,7 @@ function login(){
 
       // REDIRECT TO DASHBOARD
       setTimeout(()=> {
-        window.location.href = "index.html"; // или dashboard.html, если так названо
+        window.location.href = "dashboard.html";
       }, 600);
   } else {
       status.innerHTML = "❌ Wrong email or password";
